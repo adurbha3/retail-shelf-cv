@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["retailshelf*"]
+
+[project]
+name = "retail-shelf-cv"
+version = "0.1.0"
+description = "Synthetic retail-shelf computer vision: slot detection, price OCR, and barcode decoding"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.24",
+    "torch>=2.0",
+    "pillow>=10.0",
+    "matplotlib>=3.7",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
